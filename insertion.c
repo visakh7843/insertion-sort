@@ -16,16 +16,24 @@ int sort(int *a,int n)
 		 
     }
 }
+
+void read(int *a,int n)
+{
+  int i;
+ printf("\nenter the elements to be sorted:");
+  for(i=0;i<n;i++)
+    {
+      scanf("%d",&a[i]);
+    }
+
+}
 main()
 {
   int a[20],n,i,k,j,b;
   printf("\nenter the no.of elements:");
   scanf("%d",&n);
-  printf("\nenter the elements to be sorted:");
-  for(i=0;i<n;i++)
-    {
-      scanf("%d",&a[i]);
-    }
+  read(a,n);
+ 
   sort(a,n);
   printf("\nelements after sorting;");
   for(i=0;i<n;i++)
