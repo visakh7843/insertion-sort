@@ -1,14 +1,7 @@
 #include<stdio.h>
-main()
+int sort(int *a,int n)
 {
-  int a[20],n,i,k,j,b;
-  printf("\nenter the no.of elements:");
-  scanf("%d",&n);
-  printf("\nenter the elements to be sorted:");
-  for(i=0;i<n;i++)
-    {
-      scanf("%d",&a[i]);
-    }
+  int i,j,k;
   for(i=1;i<n;i++)
     {
       k=a[i];
@@ -19,14 +12,21 @@ main()
 	}
      
     
-	
-	  printf("\nafter %d iteration :",i);
-	  for(b=0;b<n;b++)
-	    {
-	  printf("\t %d ",a[b]);
-	    }
+
 		 
     }
+}
+main()
+{
+  int a[20],n,i,k,j,b;
+  printf("\nenter the no.of elements:");
+  scanf("%d",&n);
+  printf("\nenter the elements to be sorted:");
+  for(i=0;i<n;i++)
+    {
+      scanf("%d",&a[i]);
+    }
+  sort(a,n);
   printf("\nelements after sorting;");
   for(i=0;i<n;i++)
     {
